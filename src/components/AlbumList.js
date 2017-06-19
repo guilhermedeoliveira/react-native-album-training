@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import AlbumDetail from './AlbumDetail';
+import Card from './Card';
 
 class AlbumList extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class AlbumList extends Component {
 
   renderAlbums() {
     return this.state.albums.map(album =>
-      <AlbumDetail key={album.title} album={album} />
+      <Card key={album.title} album={album} />
     );
   }
 
